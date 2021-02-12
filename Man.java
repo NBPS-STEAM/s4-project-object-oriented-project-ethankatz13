@@ -27,4 +27,5 @@ class Man {
     color1 = color;
     height1 = height;
   }
+  
 }
