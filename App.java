@@ -10,8 +10,9 @@ public class App
 
       System.out.println("and how many inches would you like him to be?");
       int inputHeight = input.nextInt();
-
+      input.nextLine();
       Man guy = new Man ("", 0);
+      
 
       guy.setColor(inputColor);
       guy.setHeight(inputHeight);
@@ -23,17 +24,16 @@ public class App
 
       Power p = new Power("");
       p.setPower(inputPower);
+      
 
-      System.out.println("You have " + numPowers + ". Would you like to create another one?");
+      System.out.println("You have " + Power.numPowers + ". Would you like to create another one?");
       String yesNo = input.nextLine();
 
-      if(yesNo == "yes" || yesNo == "Yes")
+      if(yesNo.equalsIgnoreCase("yes"))
       {
-        System.out.println("What would your next power be?");
-        String inputPower = input.nextLine();
-        Power p2 = new Power("");
-        p2.setPower(inputPower);
-        System.out.println(Power.getNumPowers);
+        System.out.println("The next power you recieve will be a very stretcy thumb!");
+        Power p2 = new Power("Stretchy Thumb");
+        
       }
       else
       {
